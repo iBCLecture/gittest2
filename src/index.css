@@ -11,3 +11,128 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#root{
+  min-height:100vh;
+}
+
+button {
+  width: auto;
+  padding:0;
+  margin:0;
+  background:none;
+  border:0;
+  font-size:0;
+  line-height:0;
+  overflow:visible;
+  cursor:pointer;
+}
+
+#wrapper{
+  min-height: auto;
+  background-color: rgba(175, 175, 175, 0.548);
+  
+}
+.shadow-box-example {
+  height: 50px;
+  width: 100vw;
+  background-color: #cce1f1;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+#message_container{
+  width: auto;
+  height: auto;
+  background-color:rgba(175, 175, 175, 0);
+  position: relative;
+  margin-bottom: 50px;
+}
+#msg_form{
+  position: fixed;
+  bottom: 5px;
+  left: 2px;
+  width: calc(100% - 57px);
+}
+#send_btn {
+  background-image: url("send_button1.svg");
+  width: 44px;
+  height: 35px;
+  position: fixed;
+  bottom: 7px;
+  right: 7px;
+}
+#USER{
+  float: right;
+}
+#API{
+  float: left;
+}
+#bms_messages {
+  overflow: auto;/* スクロールを効かせつつ、メッセージがタイムラインの外に出ないようにする */
+  height:100%;/*テキストエリアが下に張り付く様にする*/
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  background-color: #eee;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2) inset;/*ヘッダーの下に影を入れる*/
+}
+  /* メッセージ全般のスタイル */
+  .bms_message {
+      margin: 0px;
+      padding: 14px;/*吹き出しがタイムラインの側面にひっつかない様に隙間を開ける*/
+      font-size: 16px;
+      word-wrap: break-word;/* 吹き出し内で自動で改行 */
+      white-space: normal;/*指定widthに合わせて、文字を自動的に改行*/
+  }
+
+       .bms_message_box{
+          margin-top: 15px;/*上下の吹き出しがひっつかない様に隙間を入れる*/
+          max-width: 100%;/*文字が長くなった時に吹き出しがタイムラインからはみ出さない様にする*/
+          font-size: 16px;
+      }
+
+          .bms_message_content{
+              padding: 15px;/*文字や画像（コンテンツ）の外側に隙間を入れる*/
+          }
+
+  /* メッセージ１（左側） */
+  .bms_left {
+      float: left;/*吹き出しをbms_messagesに対して左寄せ*/
+      line-height: 1.3em;
+  }
+
+          .bms_left .bms_message_box {
+              color: #333;/*テキストを黒にする*/
+              background: rgb(252, 250, 250);
+              border: 2px solid #b2d6ff;
+              border-radius: 0px 30px 30px 30px;/*左上だけ尖らせて吹き出し感を出す*/
+              margin-right: 50px;/*左側の発言だとわかる様に、吹き出し右側に隙間を入れる*/
+          }
+  /* メッセージ２（右側） */
+  .bms_right {
+      float: right;/*吹き出しをbms_messagesに対して右寄せ*/
+      line-height: 1.3em;
+  }
+
+          .bms_right .bms_message_box {
+              color: #fff;/*テキストを白にする*/
+              display: inline-block;
+              background: #13178E;
+              border: 2px solid #13178E;
+              border-radius: 30px 30px 0px 30px;/*右下だけ尖らせて吹き出し感を出す*/
+              margin-left: 50px;/*右側の発言だとわかる様に、吹き出し左側に隙間を入れる*/
+          }
+  /* 回り込みを解除 */
+  .bms_clear {
+      clear: both; /* 左メッセージと右メッセージの回り込み(float)の効果の干渉を防ぐために必要（これが無いと、自分より下のメッセージにfloatが影響する） */
+
+  }
+  .selectmenu {
+    width: 100vw;
+    height: 100vh;
+  }
+  @media screen and (max-width: 320px) and (max-width: 480px) {
+    .selectmenu {
+      width: 320px;
+      height: 480px;
+    }
+  }
