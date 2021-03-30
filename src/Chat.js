@@ -151,7 +151,7 @@ class Chat extends Component {
       body: raw,
       redirect: 'follow'
     };
-    fetch("https://ibchiro.tk/api/response/toyota factory guide", requestOptions)//ここのurlを変えると接続するAPIが変わる
+    fetch("https://ibchiro.ml/api/response/toyota factory guide", requestOptions)//ここのurlを変えると接続するAPIが変わる
       .then(response => response.json())
       .then(json => {
         console.log(json);
