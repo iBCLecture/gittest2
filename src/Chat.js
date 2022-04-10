@@ -110,6 +110,7 @@ class Chat extends Component {
         {
           id: 1,
           title: "やあやあ",
+
           type: "API"
         }
       ],
