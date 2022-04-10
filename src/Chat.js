@@ -91,9 +91,11 @@ class Chat extends Component {
       messages: [
         {
           id: 1,
-          title: "hello world",
-          type: "API",
-        },
+
+          title: "編集したぜ～い！",
+          type: "API"
+        }
+
       ],
       countmsg: 2,
     };
