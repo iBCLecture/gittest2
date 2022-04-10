@@ -109,7 +109,7 @@ class Chat extends Component {
       messages: [
         {
           id: 1,
-          title: "やあやあ",
+          title: "やあやあおいおい",
 
           type: "API"
         }
